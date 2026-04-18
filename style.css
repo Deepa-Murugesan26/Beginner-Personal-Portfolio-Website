@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0b0f1a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 25px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+/* LOGO */
+nav h2 {
+  color: #00e5ff;
+  font-size: 22px;
+}
+
+/* LINKS */
+nav div {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap; /* 🔥 prevents cutting like "C" */
+  position: relative;
+}
+
+/* underline effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00e5ff;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ================= SECTION COMMON ================= */
+section {
+  min-height: 100vh;
+  padding: 120px 10% 50px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  width: 50%;
+}
+
+.left h1 {
+  font-size: 55px;
+}
+
+.left h1 span {
+  color: #00e5ff;
+}
+
+.left h3 {
+  color: #aaa;
+  margin-top: 10px;
+}
+
+/* LINKEDIN */
+.linkedin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.icon {
+  width: 22px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #00e5ff;
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* RIGHT IMAGE */
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #00e5ff;
+}
+
+/* ================= CARDS ================= */
+.card, .contact-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  margin: 15px auto;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 500px;
+  transition: 0.3s;
+}
+
+.card:hover, .contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00e5ff;
+}
+
+/* ================= CONTACT GRID ================= */
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* LINKS INSIDE CARDS */
+.contact-card a {
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: bold;
+}
